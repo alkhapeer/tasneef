@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>خدمة تصنيف المقاولين</title>
+
+<style>
+:root {
+  --main:#1b4ed8;
+  --bg:#f7f7f7;
+  --card:#ffffff;
+  --text:#1f2937;
+  --muted:#6b7280;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Cairo", sans-serif;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* ===== Container ===== */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* ===== Product Layout ===== */
+.product {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+/* ===== Image ===== */
+.product-image {
+  background: #e5e7eb;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ===== Info ===== */
+.product-info {
+  background: var(--card);
+  border-radius: 12px;
+  padding: 25px;
+}
+
+.product-info h1 {
+  margin-top: 0;
+  font-size: 28px;
+}
+
+.product-info p {
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+/* ===== WhatsApp Button ===== */
+.whatsapp-btn {
+  display: block;
+  margin-top: 20px;
+  background: #25d366;
+  color: #fff;
+  text-align: center;
+  padding: 14px;
+  border-radius: 10px;
+  font-size: 18px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.whatsapp-btn:hover {
+  opacity: 0.85;
+}
+
+/* ===== Tabs ===== */
+.tabs {
+  margin-top: 40px;
+  background: var(--card);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.tab-buttons {
+  display: flex;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.tab-buttons button {
+  flex: 1;
+  padding: 15px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.tab-buttons button.active {
+  border-bottom: 3px solid var(--main);
+  color: var(--main);
+}
+
+.tab-content {
+  display: none;
+  padding: 20px;
+  line-height: 1.8;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+/* ===== FAQ ===== */
+.faq {
+  margin-top: 40px;
+}
+
+.faq-item {
+  background: var(--card);
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.faq-question {
+  padding: 15px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.faq-answer {
+  padding: 0 15px 15px;
+  display: none;
+  color: var(--muted);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 900px) {
+  .product {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <!-- ===== Product Section ===== -->
+  <section class="product">
+
+    <div class="product-image">
+      <img src="https://images.unsplash.com/photo-1581091870627-3c1a79f17b64" alt="">
+    </div>
+
+    <div class="product-info">
+      <h1>خدمة تصنيف المقاولين</h1>
+      <p>
+        نساعدك في رفع وتصحيح تصنيف منشأتك لدى الجهات المختصة بسرعة،
+        باحترافية، ووفق الأنظمة المعتمدة داخل المملكة.
+      </p>
+
+      <a class="whatsapp-btn"
+         href="https://wa.me/966559097686⁩"
+         target="_blank">
+        تواصل معنا عبر واتساب
+      </a>
+    </div>
+
+  </section>
+
+  <!-- ===== Tabs ===== -->
+  <section class="tabs">
+    <div class="tab-buttons">
+      <button class="active" onclick="openTab(0)">وصف الخدمة</button>
+      <button onclick="openTab(1)">ماذا نقدم</button>
+      <button onclick="openTab(2)">الشروط</button>
+    </div>
+
+    <div class="tab-content active">
+      خدمة متكاملة تشمل دراسة وضع المنشأة، تجهيز الملفات،
+      المتابعة مع الجهات المختصة حتى صدور التصنيف.
+    </div>
+
+    <div class="tab-content">
+      ✔ رفع التصنيف  
+      <br>✔ إعادة التأهيل  
+      <br>✔ استشارات تنظيمية  
+    </div>
+
+    <div class="tab-content">
+      وجود سجل تجاري ساري  
+      <br>توفر بيانات مالية  
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="faq">
+    <h2>الأسئلة الشائعة</h2>
+
+    <div class="faq-item">
+      <div class="faq-question">كم تستغرق مدة التصنيف؟</div>
+      <div class="faq-answer">تختلف المدة حسب جاهزية المستندات.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">هل الخدمة معتمدة؟</div>
+      <div class="faq-answer">نعم، وفق الأنظمة المعتمدة.</div>
+    </div>
+
+  </section>
+
+</div>
+
+<script>
+function openTab(index) {
+  document.querySelectorAll(".tab-buttons button")
+    .forEach((b,i)=>b.classList.toggle("active", i===index));
+
+  document.querySelectorAll(".tab-content")
+    .forEach((c,i)=>c.classList.toggle("active", i===index));
+}
+
+document.querySelectorAll(".faq-question").forEach(q=>{
+  q.onclick = () => {
+    const a = q.nextElementSibling;
+    a.style.display = a.style.display === "block" ? "none" : "block";
+  }
+});
+</script>
+
+</body>
+</html>
